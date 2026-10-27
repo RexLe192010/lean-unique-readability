@@ -1,0 +1,25 @@
+name = "PropLogic"
+defaultTargets = ["PropLogic"]
+testDriver = ""
+
+# PropLogic — a machine-checked formalization of Chapter 2 (Propositional Logic)
+# of the CS 8803 "Logic in Computer Science" lecture notes.
+#
+# Pinned to leanprover/lean4:v4.15.0 and Mathlib v4.15.0, matching `arlib`
+# (github.com/meelgroup/arlib) so that material migrates with zero porting.
+# If you bump `lean-toolchain`, bump the Mathlib tag here too and re-run
+# `lake update` + `lake exe cache get`.
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.15.0"
+
+[[require]]
+name = "arlib"
+git = "https://github.com/meelgroup/arlib.git"
+rev = "main"
+
+[[lean_lib]]
+name = "PropLogic"
